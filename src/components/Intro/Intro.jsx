@@ -27,11 +27,11 @@ const Intro = () => {
       <div className="i-left">
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hey ! Welcome to</span>
-          <span> Whispering Woods</span>
-          <span>
-           
+          <span style={{ color: darkMode ? "white" : "" }}>
+            Hey ! Welcome to
           </span>
+          <span> Whispering Woods</span>
+          <span></span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
           <button className="button i-button">Call</button>
@@ -39,7 +39,7 @@ const Intro = () => {
         {/* social icons */}
         <div className="i-icons">
           <img className="fb" src={facebook} alt="" />
-          <img className= "yt" src={ytb} alt="" />
+          <img className="yt" src={ytb} alt="" />
           {/* <img className="insta" src={Insta} alt="" /> */}
         </div>
       </div>
@@ -74,7 +74,7 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Costumer" text2="Service" />
+          <FloatinDiv img={thumbup} text1="Best Customer" text2="Service" />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
