@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: 30% 30% 30%;
     row-gap: 5px;
-    column-gap: 10%;
+    column-gap: 5%;
 }
 
 .star-img{

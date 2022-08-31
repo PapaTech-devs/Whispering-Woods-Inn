@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
 import PhoneIcon from "@iconscout/react-unicons/icons/uil-phone";
 import MobileIcon from "@iconscout/react-unicons/icons/uil-mobile-android";
+import HomeIcon from "@iconscout/react-unicons/icons/uil-home";
 
 const Contact = () => {
   const theme = useContext(themeContext);
@@ -67,6 +68,13 @@ const Contact = () => {
             >
               9641617459
             </a>
+          </div>
+          <div className="address">
+            <HomeIcon size={30} style={{ color: darkMode ? "white" : "" }} />
+            <p>
+              Near BITM College, Kamarpara, On Bolpur - Illambazar Road, Bolpur,
+              Birbhum 731236
+            </p>
           </div>
         </div>
       </div>

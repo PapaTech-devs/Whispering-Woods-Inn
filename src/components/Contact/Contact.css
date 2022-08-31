@@ -9,6 +9,19 @@
     margin-bottom: 15px;
 }
 
+.address{
+    margin-top: -15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.address > p{
+    font-weight: bold;
+    width: 70%;
+}
+
 .hightlight-number{
     text-decoration: none;
     color: black;
