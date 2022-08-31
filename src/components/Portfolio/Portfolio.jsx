@@ -17,10 +17,12 @@ const Portfolio = () => {
   return (
     <div className="portfolio" id="pictures">
       {/* heading */}
-      <span style={{ color: darkMode ? "white" : "" }}>
-        Some beautiful pictures of
-      </span>
-      <span>Our Property</span>
+      <p>
+        <span style={{ color: darkMode ? "white" : "" }}>
+          Some beautiful pictures of
+        </span>
+        <span> Our Property</span>
+      </p>
 
       {/* slider */}
       <Swiper
