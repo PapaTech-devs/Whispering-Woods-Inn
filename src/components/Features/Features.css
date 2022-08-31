@@ -1,0 +1,30 @@
+.main{
+    height:40vh;
+    margin:0 3.5rem;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    row-gap: 5px;
+    column-gap: 10%;
+}
+
+.star-img{
+    width:30px;
+}
+
+.data {
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+
+.data > p{
+    font-size: 1rem;
+}

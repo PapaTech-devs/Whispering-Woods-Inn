@@ -2,6 +2,9 @@ import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+import PhoneIcon from "@iconscout/react-unicons/icons/uil-phone";
+import MobileIcon from "@iconscout/react-unicons/icons/uil-mobile-android";
+
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -43,6 +46,28 @@ const Contact = () => {
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
           ></div>
+        </div>
+        <div>
+          <div className="phone-number">
+            <PhoneIcon size={30} style={{ color: darkMode ? "white" : "" }} />
+            <a
+              className="hightlight-number"
+              style={{ color: darkMode ? "white" : "" }}
+              href="tel:+91 9476104546"
+            >
+              9476104546
+            </a>
+          </div>
+          <div className="phone-number">
+            <MobileIcon size={30} style={{ color: darkMode ? "white" : "" }} />
+            <a
+              className="hightlight-number"
+              style={{ color: darkMode ? "white" : "" }}
+              href="tel:+91 9641617459"
+            >
+              9641617459
+            </a>
+          </div>
         </div>
       </div>
       {/* right side form */}

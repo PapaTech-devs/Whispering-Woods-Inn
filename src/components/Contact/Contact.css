@@ -2,6 +2,20 @@
     margin-top: -4rem;
 } */
 
+.phone-number{
+    display:flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.hightlight-number{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .contact-form{
     padding: 0 3rem 0 3rem;
     display: flex;
