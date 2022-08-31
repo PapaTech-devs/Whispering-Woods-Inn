@@ -1,6 +1,6 @@
 .main{
-    height:40vh;
     margin:0 3.5rem;
+    width: 100%;
 }
 
 .title{
@@ -28,3 +28,22 @@
 .data > p{
     font-size: 1rem;
 }
+
+@media screen and (max-width: 480px) {
+    .n-list {
+        display: none;
+    }
+    .n-name{
+        font-size: 30px;
+    }
+    .main{
+        margin: 0;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 5px;
+        column-gap: 10%;
+    }    
+}
+  

@@ -30,4 +30,7 @@
   .f-content{
     transform: scale(.5);
   }
+  #mail-link{
+    font-size: 2rem;
+  }
 }
