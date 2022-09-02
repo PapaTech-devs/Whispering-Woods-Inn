@@ -34,8 +34,9 @@
   margin-top: 10px;
 }
 .i-button {
-  width: 6rem;
+  width: 5rem;
   height: 2rem;
+  text-align: center;
 }
 .i-icons {
   margin-top: 2rem;
@@ -98,9 +99,9 @@
   height: 6rem;
   width:6rem;
 }
-.button i-button{
-  width: 8rem;
-  
+
+a{
+  text-decoration: none;
 }
 
 /* blur */

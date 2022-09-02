@@ -12,7 +12,7 @@ import ytb from "../../img/yts.png";
 // import Insta from "../../img/insta.jpg";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -33,9 +33,9 @@ const Intro = () => {
           <span> Whispering Woods</span>
           <span></span>
         </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Call</button>
-        </Link>
+        <a href="tel: 9476104546" className="button i-button">
+          Call
+        </a>
         {/* social icons */}
         <div className="i-icons">
           <img className="fb" src={facebook} alt="" />
