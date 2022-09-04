@@ -23,13 +23,13 @@
   margin-bottom: -2rem;
 }
 .c-button {
-    background: #FFFFFF;
+    background-color: white;
     box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
     border-radius: 7px;
-    border: none;
     padding: 10px;
     font-size: 16px;
-    color: #5290FD;
+    color: #fd7207;
+    border: 3px solid #fdc807;
 }
 
 .c-button:hover{

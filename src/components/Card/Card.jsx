@@ -1,13 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Card.css";
 
-const Card = ({emoji, heading, detail, color}) => {
+const Card = ({ emoji, heading, detail, color, link }) => {
   return (
-    <div className="card" style={{borderColor: {color}}}> 
+    <div className="card" style={{ borderColor: { color } }}>
       <img className="cardEmo" src={emoji} alt="" />
       <span>{heading}</span>
       <span>{detail}</span>
-      <button className="c-button">LEARN MORE</button>
+      <Link to={`/gallery/${link}`} className="c-button">
+        VIEW
+      </Link>
     </div>
   );
 };

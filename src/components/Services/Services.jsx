@@ -45,6 +45,7 @@ const Services = () => {
             emoji={HeartEmoji}
             heading={"AC Cottage"}
             detail={"₹2000 + GST = ₹2240 "}
+            link={"accottage"}
           />
         </motion.div>
         {/* second card */}
@@ -57,6 +58,7 @@ const Services = () => {
             emoji={Glasses}
             heading={"Non AC"}
             detail={"₹1000 + GST = ₹1120"}
+            link={"nonacroom"}
           />
         </motion.div>
         {/* 3rd */}
@@ -70,6 +72,7 @@ const Services = () => {
             heading={"AC standard"}
             detail={"₹1600 + GST = ₹1792"}
             color="rgba(252, 166, 31, 0.45)"
+            link={"acroom"}
           />
         </motion.div>
         <div
