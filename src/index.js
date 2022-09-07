@@ -1,9 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import { ThemeProvider } from "./Context";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Gallery from "./Gallery";
+import React from "react"
+import ReactDOM from "react-dom"
+import App from "./App"
+import { ThemeProvider } from "./Context"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Gallery from "./Gallery"
+import Terms from "./terms&condition/Terms"
+import Privacy from "./privacypolicy/Privacy"
 
 ReactDOM.render(
   <ThemeProvider>
@@ -11,6 +13,8 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/gallery/:roomName" element={<Gallery />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route
           path="*"
           element={
@@ -23,7 +27,7 @@ ReactDOM.render(
     </BrowserRouter>
   </ThemeProvider>,
   document.getElementById("root")
-);
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

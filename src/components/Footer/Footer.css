@@ -13,7 +13,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 4rem;
-  gap: 4rem;
+  gap: 1rem;
   color: white;
 }
 .f-icons {
@@ -21,7 +21,7 @@
   gap: 2rem;
 }
 
-#mail-link{
+#link{
   text-decoration: none;
   color: white;
 }

@@ -1,0 +1,26 @@
+.main-content{
+    margin:0 2rem;
+}
+
+.table{
+    line-height: 1.5;
+    color: #000;
+    -webkit-text-size-adjust: none;
+    font-family: linotype-didot,serif,"Times New Roman",Garamond,Georgia,serif;
+    font-size: 100% !important;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    margin-top: 3em;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
