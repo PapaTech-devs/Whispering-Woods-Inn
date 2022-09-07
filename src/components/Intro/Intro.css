@@ -36,7 +36,9 @@
 .i-button {
   width: 5rem;
   height: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .i-icons {
   margin-top: 2rem;
@@ -135,5 +137,12 @@ a{
   .floating-div:nth-of-type(1){
     /* display: none; */
     top: -7rem !important;;
+  }
+  .i-button {
+    width: 3rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

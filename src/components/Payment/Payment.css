@@ -1,0 +1,72 @@
+.personal{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-right: 85px;
+}
+
+.hotel-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 65%;
+}
+
+.price-text{
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 45px;
+}
+
+.amount-section{
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"]{
+    padding: 10px;
+    width: 20rem;
+    margin: 0.2rem 0;
+    border-radius: 8px;
+    border: 2px solid var(--orange);
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+
+.pay-button{
+    font-size: large;
+}
+ 
+
+.payment-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 5%;
+}
+
+@media screen and (max-width: 480px) {
+    .payment-content{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 5px;
+        column-gap: 10%;
+    }
+
+    input[type="text"]{
+        padding: 10px;
+        width: 16rem;
+        margin: 0.2rem 0;
+        border-radius: 8px;
+    }
+
+    .hotel-info{
+        margin-top: 15px;
+        width: 97%;
+    }
+}
+  
