@@ -71,6 +71,7 @@ async function displayRazorpay(
     prefill: {
       name: userName,
       contact: userPhoneNumber,
+      email: userEmail,
     },
     theme: {
       color: "#FCA61F",
