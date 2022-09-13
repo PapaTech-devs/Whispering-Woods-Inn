@@ -1,7 +1,7 @@
-import React from "react";
-import Toggle from "../Toggle/Toggle";
-import "./Navbar.css";
-import { Link } from "react-scroll";
+import Toggle from "../Toggle/Toggle"
+import "./Navbar.css"
+import { Link } from "react-scroll"
+
 const navbar = () => {
   return (
     <div className="n-wrapper" id="Navbar">
@@ -29,11 +29,6 @@ const navbar = () => {
                 Features
               </Link>
             </li>
-            {/* <li>
-              <Link to="portfolio" spy={true} smooth={true}>
-                P
-              </Link>
-            </li> */}
             <li>
               <Link to="pictures" spy={true} smooth={true}>
                 Pictures
@@ -46,7 +41,7 @@ const navbar = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default navbar;
+export default navbar

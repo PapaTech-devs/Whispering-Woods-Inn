@@ -1,25 +1,24 @@
-import React, { useContext } from "react";
-import "./Intro.css";
-import Vector1 from "../../img/Vector1.png";
-import Vector2 from "../../img/Vector2.png";
-import hotel from "../../img/hotel.png";
-import glassesimoji from "../../img/glassesimoji.png";
-import thumbup from "../../img/thumbup.png";
-import crown from "../../img/crown.png";
-import FloatinDiv from "../FloatingDiv/FloatingDiv";
-import facebook from "../../img/splashFbbg.png";
-import ytb from "../../img/yts.png";
-// import Insta from "../../img/insta.jpg";
-import { themeContext } from "../../Context";
-import { motion } from "framer-motion";
+import { useContext } from "react"
+import "./Intro.css"
+import Vector1 from "../../img/Vector1.png"
+import Vector2 from "../../img/Vector2.png"
+import hotel from "../../img/hotel.png"
+import glassesimoji from "../../img/glassesimoji.png"
+import thumbup from "../../img/thumbup.png"
+import crown from "../../img/crown.png"
+import FloatinDiv from "../FloatingDiv/FloatingDiv"
+import facebook from "../../img/splashFbbg.png"
+import ytb from "../../img/yts.png"
+import { themeContext } from "../../Context"
+import { motion } from "framer-motion"
 
 const Intro = () => {
   // Transition
-  const transition = { duration: 2, type: "spring" };
+  const transition = { duration: 2, type: "spring" }
 
   // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
 
   return (
     <div className="Intro" id="Intro">
@@ -38,15 +37,15 @@ const Intro = () => {
         </a>
         {/* social icons */}
         <div className="i-icons">
-          <img className="fb" src={facebook} alt="" />
-          <img className="yt" src={ytb} alt="" />
+          <img className="fb" src={facebook} alt="facebook splash" />
+          <img className="yt" src={ytb} alt="youtube splash" />
           {/* <img className="insta" src={Insta} alt="" /> */}
         </div>
       </div>
       {/* right image side */}
       <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
+        <img src={Vector1} alt="orange background" />
+        <img src={Vector2} alt="blue background" />
         <img className="hotel" src={hotel} alt="" />
         {/* animation */}
         <motion.img
@@ -54,7 +53,7 @@ const Intro = () => {
           whileInView={{ left: "-24%" }}
           transition={transition}
           src={glassesimoji}
-          alt=""
+          alt="Emoji with sunglasses"
         />
 
         <motion.div
@@ -90,7 +89,7 @@ const Intro = () => {
         ></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro

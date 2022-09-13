@@ -1,20 +1,41 @@
-import React from "react"
 import ReactDOM from "react-dom"
+import React from "react"
 import App from "./App"
 import { ThemeProvider } from "./Context"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Gallery from "./Gallery"
-import Terms from "./terms&condition/Terms"
-import Privacy from "./privacypolicy/Privacy"
+const Gallery = React.lazy(() => import("./Gallery"))
+const Terms = React.lazy(() => import("./terms&condition/Terms"))
+const Privacy = React.lazy(() => import("./privacypolicy/Privacy"))
 
 ReactDOM.render(
   <ThemeProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/gallery/:roomName" element={<Gallery />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy" element={<Privacy />} />
+        <Route
+          path="/gallery/:roomName"
+          element={
+            <React.Suspense fallback={<>Loading...</>}>
+              <Gallery />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/terms"
+          element={
+            <React.Suspense fallback={<>Loading...</>}>
+              <Terms />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <React.Suspense fallback={<>Loading...</>}>
+              <Privacy />
+            </React.Suspense>
+          }
+        />
         <Route
           path="*"
           element={

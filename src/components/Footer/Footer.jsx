@@ -1,4 +1,3 @@
-import React from "react"
 import "./Footer.css"
 import Wave from "../../img/wave.png"
 import Insta from "@iconscout/react-unicons/icons/uil-instagram"
@@ -9,7 +8,7 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <div className="footer">
-      <img src={Wave} alt="" style={{ width: "100%" }} />
+      <img src={Wave} alt="orange wave background" style={{ width: "100%" }} />
       <div className="f-content">
         <a id="link" href="mailto: whisperinghotel@gmail.com">
           whisperinghotel@gmail.com

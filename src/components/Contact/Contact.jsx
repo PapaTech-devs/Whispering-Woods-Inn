@@ -1,18 +1,18 @@
-import React, { useContext, useRef, useState } from "react";
-import "./Contact.css";
-import emailjs from "@emailjs/browser";
-import { themeContext } from "../../Context";
-import PhoneIcon from "@iconscout/react-unicons/icons/uil-phone";
-import MobileIcon from "@iconscout/react-unicons/icons/uil-mobile-android";
-import HomeIcon from "@iconscout/react-unicons/icons/uil-home";
+import { useContext, useRef, useState } from "react"
+import "./Contact.css"
+import emailjs from "@emailjs/browser"
+import { themeContext } from "../../Context"
+import PhoneIcon from "@iconscout/react-unicons/icons/uil-phone"
+import MobileIcon from "@iconscout/react-unicons/icons/uil-mobile-android"
+import HomeIcon from "@iconscout/react-unicons/icons/uil-home"
 
 const Contact = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-  const form = useRef();
-  const [done, setDone] = useState(false);
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
+  const form = useRef()
+  const [done, setDone] = useState(false)
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     emailjs
       .sendForm(
@@ -23,15 +23,15 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          setDone(true);
-          form.reset();
+          console.log(result.text)
+          setDone(true)
+          form.reset()
         },
         (error) => {
-          console.log(error.text);
+          console.log(error.text)
         }
-      );
-  };
+      )
+  }
 
   return (
     <div className="contact-form" id="contact">
@@ -103,7 +103,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

@@ -1,22 +1,22 @@
-import React, { useContext } from "react";
-import "./Services.css";
-import Card from "../Card/Card";
-import HeartEmoji from "../../img/cottage.ico";
-import Glasses from "../../img/hotelroom1.png";
-import Humble from "../../img/acstandard.png";
-import { themeContext } from "../../Context";
-import { motion } from "framer-motion";
+import { useContext } from "react"
+import "./Services.css"
+import Card from "../Card/Card"
+import HeartEmoji from "../../img/cottage.ico"
+import Glasses from "../../img/hotelroom1.png"
+import Humble from "../../img/acstandard.png"
+import { themeContext } from "../../Context"
+import { motion } from "framer-motion"
 
 const Services = () => {
   // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
 
   // transition
   const transition = {
     duration: 1,
     type: "spring",
-  };
+  }
 
   return (
     <div className="services" id="services">
@@ -81,7 +81,7 @@ const Services = () => {
         ></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
