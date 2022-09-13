@@ -95,11 +95,13 @@ const Payment = () => {
           <Link to="contact" spy={true} smooth={true}>
             call
           </Link>{" "}
-          the hotel to check room availability
+          the hotel to check room availability.
         </li>
-        <li>Pay advance booking fees</li>
+        <li>Pay advance booking fees.</li>
+        <li>You will get a booking id and an payment id. Store them.</li>
         <li>
-          You will get a booking id which you need to show at hotel reception
+          Pay rest of the amount at hotel reception after showing valid booking
+          id.
         </li>
       </ol>
       <div className="payment-content">

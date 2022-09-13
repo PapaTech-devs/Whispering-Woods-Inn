@@ -1,5 +1,6 @@
 import axios from "axios"
 import loadScript from "./loadScript"
+import emailjs from "@emailjs/browser"
 
 async function displayRazorpay(
   priceHotel,
@@ -62,8 +63,32 @@ async function displayRazorpay(
           data
         )
         alert(
-          `PLEASE STORE PAYMENTID = ${result.data.paymentId} ORDERID = ${result.data.orderId}`
+          `PLEASE STORE PAYMENTID = ${result.data.paymentId} BOOKING ID = ${result.data.orderId}`
         )
+        const emailElements = {
+          name: userName,
+          email: userEmail,
+          startDate: startDate,
+          endDate: toDate,
+          bookingId: result.data.orderId,
+          paymentId: result.data.paymentId,
+        }
+        emailjs
+          .send(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_BOOKING_TEMPLATE_ID,
+            emailElements,
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          )
+          .then(
+            (_) => {
+              alert(`Confirmation email sent to ${userEmail}`)
+            },
+            (error) => {
+              alert("Email service not available")
+              console.error(error.text)
+            }
+          )
       } catch (err) {
         console.log("Error", err)
       }

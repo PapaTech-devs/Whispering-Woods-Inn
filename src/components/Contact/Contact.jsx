@@ -16,14 +16,14 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_2mu5xtl",
-        "template_m5udu2c",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_CONTACT_TEMPLATE_ID,
         form.current,
-        "VLwg1ltOWvnCYAiK_"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text)
+        (_) => {
+          alert("Thank you for contacting.")
           setDone(true)
           form.reset()
         },
@@ -81,21 +81,16 @@ const Contact = () => {
       {/* right side form */}
       <div className="c-right">
         <form ref={form} onSubmit={sendEmail}>
-          <input
-            type="text"
-            name="user_name"
-            className="user"
-            placeholder="Name"
-          />
+          <input type="text" name="name" className="user" placeholder="Name" />
           <input
             type="email"
-            name="user_email"
+            name="email"
             className="user"
             placeholder="Email"
           />
           <textarea name="message" className="user" placeholder="Message" />
           <input type="submit" value="Send" className="button" />
-          <span>{done && "Thanks for Contacting me"}</span>
+          <span>{done && "Thanks for contacting"}</span>
           <div
             className="blur c-blur1"
             style={{ background: "var(--purple)" }}
