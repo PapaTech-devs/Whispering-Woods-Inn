@@ -179,10 +179,10 @@ const Payment = () => {
           {values.endDate !== "" &&
             values.startDate !== "" &&
             new Date(values.endDate) > new Date(values.startDate) &&
-            `= ₹${calculatePrice(
+            `+ 12% GST = ₹${calculatePrice(
               priceOfRooms[values.room],
               getDateDiff()
-            )} with GST`}
+            )}`}
         </p>
       </div>
     </div>
