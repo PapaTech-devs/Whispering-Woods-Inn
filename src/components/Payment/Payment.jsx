@@ -5,9 +5,9 @@ import displayRazorpay from "../../utils/displayRazorPay"
 
 const Payment = () => {
   const priceOfRooms = {
-    acroom: 350,
-    nonacroom: 250,
-    accottage: 500,
+    acroom: 1600,
+    nonacroom: 1000,
+    accottage: 2000,
   }
 
   const [values, setValues] = useState({
@@ -85,6 +85,12 @@ const Payment = () => {
     )
   }
 
+  const calculatePrice = (price, days) => {
+    let total = price * days
+    total += total * 0.12
+    return total
+  }
+
   return (
     <div className="main" id="payment">
       <p className="title">Book a room</p>
@@ -97,11 +103,10 @@ const Payment = () => {
           </Link>{" "}
           the hotel to check room availability.
         </li>
-        <li>Pay advance booking fees.</li>
-        <li>You will get a booking id and an payment id. Store them.</li>
+        <li>Pay room fees in advance.</li>
         <li>
-          Pay rest of the amount at hotel reception after showing valid booking
-          id.
+          You will get a booking id and an payment id. You need to show both at
+          the hotel reception.
         </li>
       </ol>
       <div className="payment-content">
@@ -174,7 +179,10 @@ const Payment = () => {
           {values.endDate !== "" &&
             values.startDate !== "" &&
             new Date(values.endDate) > new Date(values.startDate) &&
-            `= ₹${priceOfRooms[values.room] * getDateDiff()}`}
+            `= ₹${calculatePrice(
+              priceOfRooms[values.room],
+              getDateDiff()
+            )} with GST`}
         </p>
       </div>
     </div>
