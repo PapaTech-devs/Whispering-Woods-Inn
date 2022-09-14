@@ -75,7 +75,7 @@ const Payment = () => {
     }
 
     await displayRazorpay(
-      priceOfRooms[values.room] * getDateDiff(),
+      calculatePrice(priceOfRooms[values.room], getDateDiff()),
       values.name,
       values.email,
       values.phoneNumber,
