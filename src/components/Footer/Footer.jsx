@@ -3,7 +3,6 @@ import Wave from "../../img/wave.png"
 import Insta from "@iconscout/react-unicons/icons/uil-instagram"
 import Facebook from "@iconscout/react-unicons/icons/uil-facebook"
 import Youtube from "@iconscout/react-unicons/icons/uil-youtube"
-import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -13,12 +12,30 @@ const Footer = () => {
         <a id="link" href="mailto: whisperinghotel@gmail.com">
           whisperinghotel@gmail.com
         </a>
-        <Link id="link" to="/terms">
+        <a
+          id="link"
+          href="https://merchant.razorpay.com/policy/KID21W1D6JW9K4/terms"
+        >
           Terms and Conditions
-        </Link>
-        <Link id="link" to="/privacy">
+        </a>
+        <a
+          id="link"
+          href="https://merchant.razorpay.com/policy/KID21W1D6JW9K4/privacy"
+        >
           Privacy Policy
-        </Link>
+        </a>
+        <a
+          id="link"
+          href="https://merchant.razorpay.com/policy/KID21W1D6JW9K4/refund"
+        >
+          Cancellation and Refund
+        </a>
+        <a
+          id="link"
+          href="https://merchant.razorpay.com/policy/KID21W1D6JW9K4/contact_us"
+        >
+          Contact Us
+        </a>
         <div className="f-icons">
           <Insta color="white" size={"3rem"} />
           <Facebook color="white" size={"3rem"} />
