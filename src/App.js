@@ -9,7 +9,7 @@ const Services = React.lazy(() => import("./components/Services/Services"))
 const Portfolio = React.lazy(() => import("./components/Portfolio/Portfolio"))
 const Contact = React.lazy(() => import("./components/Contact/Contact"))
 const Footer = React.lazy(() => import("./components/Footer/Footer"))
-const Payment = React.lazy(() => import("./components/Payment/Payment"))
+// const Payment = React.lazy(() => import("./components/Payment/Payment"))
 const Features = React.lazy(() => import("./components/Features/Features"))
 
 function App() {
@@ -34,9 +34,9 @@ function App() {
       <React.Suspense fallback={<>Loading...</>}>
         <Portfolio />
       </React.Suspense>
-      <React.Suspense fallback={<>Loading...</>}>
+      {/* <React.Suspense fallback={<>Loading...</>}>
         <Payment />
-      </React.Suspense>
+      </React.Suspense> */}
       <React.Suspense fallback={<>Loading...</>}>
         <Contact />
       </React.Suspense>
